@@ -19,24 +19,6 @@ const start = document.getElementById("start")
 start.addEventListener("click", function()  {
 
 const gridContainer = document.querySelector(".grid-container");
-
-
-
-
-    //creiamo una funzione per numeri incrementali
-function numeriIncrementali (min1, max100){
-
-    // ciclo for per i creare i numeri incrementali
-    for(let i = 1 ;i < 101; i++){
-     //faccio il console.log di i per vedere in console che i miei numeri siano stampati correttamente
-        console.log(i);
-        const celle = document.createElement("div")
-        celle.append(i.toString())
-    }
-
- }
- numeriIncrementali(1, 100);
-
   
     // quanto voglio che sia grande la griglia? inteso in numero di quadrati che può contenere
 function cellGrid (orizontalCells , verticalCells){
@@ -49,13 +31,13 @@ function cellGrid (orizontalCells , verticalCells){
 
 
     // creo il mio ciclo per far si che si vedano le mie celle
-    for (let i = 0 ; i<cellsNumber; i++){
+    for (let i = 1 ; i<=cellsNumber; i++){
         // creo una variabile per i miei numeri crescenti
 
         
         const celle = document.createElement("div");
         celle.classList.add("celle");
-        
+        celle.innerHTML = `<span>${i}</span>`
         //append per aggiungere un elemento virtuale ad un elemento che abbiamo creato
         gridContainer.append(celle);
     }
