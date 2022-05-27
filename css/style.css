@@ -24,5 +24,9 @@
     height: var(--cell-size);
     border: 1px solid black;
 }
+.bgAzzurro{
+    background-color: rgba(63, 63, 184, 0.712);
+    color: white;
+}
 
 

@@ -14,10 +14,11 @@ Passaggi da fare:
 Se riesco continuo anche con i bonus
 */
 
-//Variabile globale, per richiamare il mio elemento HTML utilizabile in tutto il mio foglio js
+//Creo un adEventListener prima dell'inizio del gioco per permettere al giocatore di premere su start the game
 const start = document.getElementById("start")
 start.addEventListener("click", function()  {
 
+//Variabile globale, per richiamare il mio elemento HTML utilizabile in tutto il mio foglio js
 const gridContainer = document.querySelector(".grid-container");
   
     // quanto voglio che sia grande la griglia? inteso in numero di quadrati che può contenere
@@ -37,9 +38,15 @@ function cellGrid (orizontalCells , verticalCells){
         
         const celle = document.createElement("div");
         celle.classList.add("celle");
-        celle.innerHTML = `<span>${i}</span>`
+        celle.innerHTML = `<span>${i}</span>`;
         //append per aggiungere un elemento virtuale ad un elemento che abbiamo creato
         gridContainer.append(celle);
+
+        // creo l'elemento per far cambiare colore alle celle al click
+        celle.addEventListener("click", function () {
+            this.classList.add('bgAzzurro');
+        })
+
     }
 
 
