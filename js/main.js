@@ -46,6 +46,10 @@ function cellGrid (orizontalCells , verticalCells){
         celle.addEventListener("click", function () {
             this.classList.add('bgAzzurro');
         })
+        
+        // celle.addEventListener("click" , function(){
+        //     this.classList.add('bg');
+        // })
 
     }
 
